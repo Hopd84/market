@@ -26,8 +26,10 @@ public class StoreDepartment {
     private int id;
 
     @Column(name = "department_name")
-    private StoreDepartmentName departmentName;
+    private String departmentName;
 
     @OneToMany(mappedBy = "department", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Product> listOfProducts;
+
+
 }
